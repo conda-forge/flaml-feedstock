@@ -34,7 +34,7 @@ test:
     - flaml
   requires:
     - pip
-    - pandas >=1.1.4    
+    - pandas >=1.1.4
 
 about:
   home: https://github.com/microsoft/FLAML
