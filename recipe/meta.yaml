@@ -34,7 +34,14 @@ test:
     - flaml
   requires:
     - pip
+    - pytest    
     - pandas >=1.1.4
+    - scikit-learn >=0.24
+  source_files:
+    - test.py
+  commands:
+    - pytest test.py
+    
 
 about:
   home: https://github.com/microsoft/FLAML
