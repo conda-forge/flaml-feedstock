@@ -29,16 +29,16 @@ requirements:
     - scikit-learn >=0.24
     - python >=3.6
 
-test:
-  imports:
-    - flaml
+test:  
   requires:
     - pip
     - pytest    
     - pandas >=1.1.4
     - scikit-learn >=0.24  
+  files:
+    - run_test.py
   commands:
-    - pytest test.py
+    - pytest run_test.py
     
 
 about:
