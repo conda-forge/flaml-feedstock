@@ -36,9 +36,7 @@ test:
     - pip
     - pytest    
     - pandas >=1.1.4
-    - scikit-learn >=0.24
-  source_files:
-    - test.py
+    - scikit-learn >=0.24  
   commands:
     - pytest test.py
     
