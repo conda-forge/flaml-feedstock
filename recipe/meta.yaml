@@ -11,7 +11,7 @@ source:
   sha256: 8c5e593e011e875b7bad2fcee43078288abc8133e6eb8a566cd7ad80f4ccd231
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -29,12 +29,17 @@ requirements:
     - scikit-learn >=0.24
     - python >=3.6
 
-test:
-  imports:
-    - flaml
+test:  
   requires:
     - pip
+    - pytest    
     - pandas >=1.1.4
+    - scikit-learn >=0.24  
+  files:
+    - run_test.py
+  commands:
+    - pytest run_test.py
+    
 
 about:
   home: https://github.com/microsoft/FLAML
