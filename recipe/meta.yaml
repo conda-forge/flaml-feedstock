@@ -1,5 +1,5 @@
 {% set name = "FLAML" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.1" %}
 
 
 package:
@@ -35,10 +35,10 @@ test:
     - pytest    
     - pandas >=1.1.4
     - scikit-learn >=0.24  
-  files:
-    - run_test.py
+  source_files:
+    - test/conda
   commands:
-    - pytest run_test.py
+    - pytest -m conda
     
 
 about:
@@ -50,3 +50,4 @@ about:
 extra:
   recipe-maintainers:
     - michalchromcak
+    - shao-kun-zhang
