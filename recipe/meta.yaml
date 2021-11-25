@@ -40,8 +40,7 @@ test:
     # - pytest.ini
   commands:
     # - pytest test/conda -m conda
-    # - pytest --collectonly
-    - dpkg -l | grep tree    
+    # - pytest --collectonly        
     - tree
     - pytest -k test_classification_head
     
