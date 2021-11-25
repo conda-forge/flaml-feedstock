@@ -41,7 +41,7 @@ test:
   commands:
     # - pytest test/conda -m conda
     # - pytest --collectonly
-    - pytest test/nlp/*.py -k test_classification_head
+    - pytest flaml/test/nlp/*.py -k test_classification_head
     
 about:
   home: https://github.com/microsoft/FLAML
