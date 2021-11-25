@@ -36,7 +36,7 @@ test:
     - pandas >=1.1.4
     - scikit-learn >=0.24  
   source_files:    
-    - test/nlp/
+    - test/nlp/*.py
     # - pytest.ini
   commands:
     # - pytest test/conda -m conda
