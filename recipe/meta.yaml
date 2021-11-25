@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c5e593e011e875b7bad2fcee43078288abc8133e6eb8a566cd7ad80f4ccd231
+  sha256: 91920acc46415940cfa50a2140f84af6cd38a7b747960c7e406af7e3106e2a68
 
 build:
   number: 1
@@ -29,10 +29,10 @@ requirements:
     - scikit-learn >=0.24
     - python >=3.6
 
-test:  
+test:
   requires:
     - pip
-    - pytest    
+    - pytest
     - pandas >=1.1.4
     - scikit-learn >=0.24  
   source_files:
@@ -42,7 +42,6 @@ test:
     # - pytest -m conda
     - pytest -k test_classification_head
     
-
 about:
   home: https://github.com/microsoft/FLAML
   summary: A fast and lightweight autoML system
@@ -50,6 +49,6 @@ about:
   license_file: LICENSE
 
 extra:
-  recipe-maintainers:
+  recipe-maintainers:    
     - michalchromcak
     - shao-kun-zhang
