@@ -37,7 +37,7 @@ test:
     - scikit-learn >=0.24  
   source_files:
     # - test/conda
-    - test    
+    - test/nlp    
   commands:
     # - pytest -m conda
     - pytest -k test_classification_head
