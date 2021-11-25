@@ -35,12 +35,12 @@ test:
     - pytest
     - pandas >=1.1.4
     - scikit-learn >=0.24  
-  source_files:
-    # - test/conda
-    - test/nlp/*
+  source_files:    
+    - test
+    - pytest.ini
   commands:
-    # - pytest -m conda
-    - pytest -k test_classification_head
+    # - pytest test/conda -m conda
+    - pytest test/nlp -k test_classification_head
     
 about:
   home: https://github.com/microsoft/FLAML
