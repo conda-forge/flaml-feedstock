@@ -41,9 +41,8 @@ test:
   commands:
     # - pytest test/conda -m conda
     # - pytest --collectonly
-    - ls -alt
-    - ls test -alt
-    - ls test/nlp -alt
+    - sudo apt install tree
+    - tree    
     - pytest -k test_classification_head
     
 about:
