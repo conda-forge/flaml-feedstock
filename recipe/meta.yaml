@@ -36,9 +36,11 @@ test:
     - pandas >=1.1.4
     - scikit-learn >=0.24  
   source_files:
-    - test/conda
+    # - test/conda
+    - test    
   commands:
-    - pytest -m conda
+    # - pytest -m conda
+    - pytest -k test_classification_head
     
 
 about:
