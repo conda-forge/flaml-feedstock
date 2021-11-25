@@ -41,8 +41,8 @@ test:
   commands:
     # - pytest test/conda -m conda
     # - pytest --collectonly
-    - sudo apt install tree
-    - tree    
+    - dpkg -l | grep tree    
+    - tree
     - pytest -k test_classification_head
     
 about:
