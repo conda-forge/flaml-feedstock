@@ -35,13 +35,15 @@ test:
     - pytest
     - pandas >=1.1.4
     - scikit-learn >=0.24
-  source_files:    
-    - test/test_version.py
-    # - test/test_conda_distribution.py
-    # - pytest.ini
+  source_files:
+    # to make sure the conda marker is working
+    - pytest.ini
+    # list all conda related test files here
+    # note: keep the conda related tests directly in the test folder, so that bundling to tar.gz includes them
+    # or just extend the test_conda_distribution.py file with more tests (and make sure to mark it as conda)
+    - test/test_conda_distribution.py    
   commands:
-    # - pytest -m conda
-    - pytest test/test_version.py
+    - pytest -m conda    
     
 about:
   home: https://github.com/microsoft/FLAML
