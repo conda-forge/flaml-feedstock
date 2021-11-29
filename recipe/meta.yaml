@@ -11,7 +11,7 @@ source:
   sha256: aa0ee164cb5cd8faf8f1aea6b48923e0603ce41a509017aedfeca3cbc03f0acb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -35,12 +35,14 @@ test:
     - pytest
     - pandas >=1.1.4
     - scikit-learn >=0.24
-  files:
-    - run_test.py
-  commands:
-    - pytest run_test.py
-
-
+  source_files:        
+    # list all conda related test files here
+    # note: keep the conda related tests directly in the test folder, so that bundling to tar.gz includes them
+    # or just extend the test_conda_distribution.py file with more tests (and make sure to mark it as conda)
+    - test/test_conda_distribution.py    
+  commands:        
+    - pytest -m conda    
+    
 about:
   home: https://github.com/microsoft/FLAML
   summary: A fast and lightweight autoML system
@@ -49,5 +51,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - Shao-kun-Zhang
     - michalchromcak
+    - shao-kun-zhang
