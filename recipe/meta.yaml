@@ -1,6 +1,5 @@
 {% set name = "FLAML" %}
-{% set version = "0.9.7" %}
-
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d65f88c166ca265ba8f890f3b588a3d54219fc14068d112ef8e6e61ac63a1705
+  sha256: 5a02c590f4c9c4069e23fe8741d541b34e786e2dccdb09aa8e45dfd9766a59ff
 
 build:
   number: 0
