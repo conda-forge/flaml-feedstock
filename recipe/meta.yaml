@@ -10,7 +10,7 @@ source:
   sha256: 389aa1e0700553e59560dd9fa403454120c36af525fe9e91763860bb699bdb78
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +22,7 @@ requirements:
   run:
     - numpy >=1.17.0rc1
     - lightgbm >=2.3.1
-    - xgboost >=0.90,<=1.3.3
+    - xgboost >=0.90
     - scipy >=1.4.1
     - pandas >=1.1.4
     - scikit-learn >=0.24
