@@ -1,11 +1,11 @@
-About flaml
-===========
+About flaml-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flaml-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/microsoft/FLAML
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flaml-feedstock/blob/main/LICENSE.txt)
 
 Summary: A fast and lightweight autoML system
 
