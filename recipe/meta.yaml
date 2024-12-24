@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 33102862a21c63d004f78e1349ccd55753e3534bfcdcb6e65a08562c14d69e44
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy >=1.17.0rc1
     - lightgbm >=2.3.1
@@ -26,7 +26,7 @@ requirements:
     - scipy >=1.4.1
     - pandas >=1.1.4
     - scikit-learn >=0.24
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   requires:
@@ -34,6 +34,7 @@ test:
     - pytest
     - pandas >=1.1.4
     - scikit-learn >=0.24
+    - python {{ python_min }}
   source_files:
     # list all conda related test files here
     # note: keep the conda related tests directly in the test folder, so that bundling to tar.gz includes them
