@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@michalchromcak](https://github.com/michalchromcak/)
 * [@skzhang1](https://github.com/skzhang1/)
+* [@thewchan](https://github.com/thewchan/)
 
