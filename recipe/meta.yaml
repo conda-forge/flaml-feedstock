@@ -1,13 +1,13 @@
-{% set name = "FLAML" %}
-{% set version = "2.1.2" %}
+{% set name = "flaml" %}
+{% set version = "2.3.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 33102862a21c63d004f78e1349ccd55753e3534bfcdcb6e65a08562c14d69e44
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f3237d3e4970b93800ff175389362a8de6d68af4bc333c211931791e9b26debe
 
 build:
   number: 0
@@ -18,29 +18,32 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - numpy >=1.17.0rc1
-    - lightgbm >=2.3.1
-    - xgboost >=0.90
-    - scipy >=1.4.1
-    - pandas >=1.1.4
-    - scikit-learn >=0.24
-    - python >=3.6
+    - python >={{ python_min }}
+    - numpy >=1.17
 
 test:
   requires:
     - pip
     - pytest
     - pandas >=1.1.4
-    - scikit-learn >=0.24
+    - lightgbm >=2.3.1
+    - xgboost >=0.90,<3.0.0
+    - scipy >=1.4.1
+    - scikit-learn >=1.0.0
+    - python {{ python_min }}
   source_files:
     # list all conda related test files here
     # note: keep the conda related tests directly in the test folder, so that bundling to tar.gz includes them
     # or just extend the test_conda_distribution.py file with more tests (and make sure to mark it as conda)
     - test/test_conda_distribution.py
   commands:
+    - pip check
     - pytest -m conda
+  imports:
+    - flaml
 
 about:
   home: https://github.com/microsoft/FLAML
@@ -52,3 +55,4 @@ extra:
   recipe-maintainers:
     - michalchromcak
     - skzhang1
+    - thewchan
