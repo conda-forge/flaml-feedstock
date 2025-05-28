@@ -1,13 +1,13 @@
 {% set name = "flaml" %}
-{% set version = "2.3.4" %}
+{% set version = "2.3.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 308c3e769976d8a0272f2fd7d98258d7d4a4fd2e4525ba540d1ba149ae266c54
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/FLAML-{{ version }}.tar.gz
+  sha256: 78dc9de830411f1635d7f97b460dacf31cc2d7000b1a8a613d8e722a897d5669
 
 build:
   number: 0
