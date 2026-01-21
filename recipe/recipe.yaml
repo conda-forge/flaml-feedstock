@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flaml
-  version: 2.4.1
+  version: "2.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: a8b53374cc82d5cf4b1de8b2ee0dd76a18e2ee6d0d1c5fed22dba3c2d71a14d1
+  sha256: c1cbf0056ccc44a18539e0c3e18c0142706c72716fa56687fce52444b251c549
 
 build:
   number: 0
